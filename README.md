@@ -1,1 +1,0 @@
-# PROJECT-Q-30-Days-Quantum-Challenge
