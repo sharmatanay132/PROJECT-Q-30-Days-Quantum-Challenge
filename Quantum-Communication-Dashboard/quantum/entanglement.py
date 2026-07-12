@@ -1,5 +1,6 @@
 from qiskit import QuantumCircuit
 from qiskit_aer import AerSimulator
+import matplotlib.pyplot as plt
 def create_entanglement():
     qc = QuantumCircuit(2, 2)
     qc.h(0)
@@ -18,3 +19,6 @@ counts = run_entanglement(qc)
 print("Measurement Counts:", counts)
 # Display the circuit
 print(qc)
+fig = qc.draw(output="mpl")
+fig.savefig("outputs/entanglement.png")
+plt.close(fig)

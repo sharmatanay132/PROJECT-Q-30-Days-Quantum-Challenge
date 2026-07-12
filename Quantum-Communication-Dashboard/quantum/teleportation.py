@@ -1,5 +1,6 @@
 from qiskit import QuantumCircuit
 from qiskit_aer import AerSimulator
+import matplotlib.pyplot as plt
 def create_teleportation():
     qc = QuantumCircuit(3,3)
     qc.h(0)
@@ -17,3 +18,6 @@ qc = create_teleportation()
 counts = run_teleportation(qc)
 print("Measurement Counts:", counts)
 print(qc)
+fig = qc.draw(output="mpl")
+fig.savefig("outputs/teleportation.png")
+plt.close(fig)
